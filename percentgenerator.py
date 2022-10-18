@@ -1,3 +1,5 @@
+import pyperclip
+
 while True:
     try:
         inputstring = input("Enter current price (N/n for exit):")
@@ -12,7 +14,9 @@ while True:
             else:
                 price = float(inputstring)
             try:
-                print(int((price - currentprice) / currentprice * 10000)/100, '%')
+                outputstring = str(int((price - currentprice) / currentprice * 10000)/100) + '%'
+                print(outputstring, '   (Copied to clipboard!)')
+                pyperclip.copy(outputstring)
             except:
                 pass
     except:
