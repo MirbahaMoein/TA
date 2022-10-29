@@ -6,11 +6,17 @@ while True:
         stoploss = float(stoplossinput)
         while True:
             try:
-                entryinput = input("Enter entry price: ")
+                entryinput = input("Enter entry price (N/n for new stop loss): ")
+                if entryinput == 'N' or entryinput == 'n':
+                    break
                 entry = float(entryinput)
-                targetinput = input("Enter target price: ")
+                targetinput = input("Enter target price (N/n for new stop loss): ")
+                if targetinput == 'N' or targetinput == 'n':
+                    break
                 target = float(targetinput)
-                riskpercentageinput = input("Enter desired risk percentage(e.g. '0.5'): ")
+                riskpercentageinput = input("Enter desired risk percentage (e.g. '0.5') (N/n for new stop loss): ")
+                if riskpercentageinput == 'N' or riskpercentageinput == 'n':
+                    break
                 riskpercentage = float(riskpercentageinput)
                 slpercentage = abs(((entry - stoploss) / stoploss) * 100)
                 positionsizeusd = 100000 * riskpercentage / slpercentage
