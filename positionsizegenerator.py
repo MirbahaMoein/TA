@@ -12,10 +12,10 @@ while True:
                 if entryinput == 'N' or entryinput == 'n':
                     break
                 entry = float(entryinput)
-                targetinput = input("Enter target price (N/n for new stop loss): ")
-                if targetinput == 'N' or targetinput == 'n':
-                    break
-                target = float(targetinput)
+                #targetinput = input("Enter target price (N/n for new stop loss): ")
+                #if targetinput == 'N' or targetinput == 'n':
+                #    break
+                #target = float(targetinput)
                 riskpercentageinput = input("Enter desired risk percentage (e.g. '0.5') (N/n for new stop loss): ")
                 if riskpercentageinput == 'N' or riskpercentageinput == 'n':
                     break
