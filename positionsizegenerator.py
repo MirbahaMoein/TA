@@ -2,7 +2,9 @@ import pyperclip
 
 while True:
     try:
-        stoplossinput = input("Enter stop loss price: ")
+        stoplossinput = input("Enter stop loss price (N/n for exit): ")
+        if stoplossinput == 'N' or stoplossinput == 'n':
+            break
         stoploss = float(stoplossinput)
         while True:
             try:
